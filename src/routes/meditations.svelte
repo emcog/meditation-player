@@ -1,15 +1,23 @@
 <script context="module">
+	import { tracks } from '../data/tracks';
+	// console.log(tracks);
+
 </script>
-<div>Audio</div>
-<audio
-	controls
-	src='https://social-mindfulness-meditations.s3.eu-west-2.amazonaws.com/podcasts/bodyscan.mp3'>
-</audio>
-<table>
-	<tr>
-		<td>01</td><td>Name</td><td>duration</td>
-	</tr>
-</table>
+<ul id ="track-list">
+	{#each tracks as { title, url }, i }
+		<li>
+			<figcaption>
+			{ i + 1 }: {title}
+			</figcaption>
+			<audio
+				controls
+				src={url}>
+			</audio>
+		</li>
+	{/each}
+</ul>
+
+
 <style>
 
 </style>

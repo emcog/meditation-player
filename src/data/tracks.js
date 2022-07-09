@@ -1,11 +1,9 @@
-export const meditationsData = [
+import { readable } from 'svelte/store';
+
+export const tracks = [
 	{
 		title: "Three-Step reset",
 		url: " https://media.mindfulnessconnected.com/three-step-reset.mp3"
-	},
-	{
-		title: "Bodyscan",
-		url: "https://media.mindfulnessconnected.com/bodyscan.mp33"
 	},
 	{
 		title: "Bodyscan",
