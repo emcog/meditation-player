@@ -130,7 +130,7 @@
 
 	function isClicked() {
 		console.log('isClicked');
-		// service.send({ type: 'TOGGLE_PLAY' })
+		service.send({ type: 'TOGGLE_PLAY' })
 	}
 
 	const isClicked2 = () => console.log('isClicked2')
@@ -155,7 +155,7 @@
  */
 </script>
 
-<button on:click={isClicked2}>CLICK ME</button>
+<button on:click={isClicked}>CLICK ME</button>
 <div class="h-screen p-16 bg-gray-200 antialiased flex flex-col justify-center">
 	<div class="shadow-lg rounded-lg max-w-2xl bg-gray-400 mx-auto">
 		<main class="px-8 py-6">
@@ -166,7 +166,7 @@
 			<audio bind:this={audio} src="https://chtbl.com/track/643D/cdn.simplecast.com/audio/167887/167887a0-ac00-4cf9-bc69-b5ca845997db/115a8d3c-5349-40f2-94f3-6bd45d9356a1/shoptalkshow-415_tc.mp3"></audio>
 			<div class="flex gap-8 items-center"><img class="-mt-12 border-2 border-gray-300 rounded-md" id="artwork" width="120" height="120" src="https://i2.wp.com/shoptalkshow.com/wp-content/uploads/2019/10/Jen-Simmons-2019.jpg?resize=80%2C80&amp;ssl=1" alt=""/>
 				<div class="flex w-full gap-4 items-center" id="timeline">
-					<button bind:this={playToggle} on:click={isClicked2}   class="border border-gray-500 text-white rounded-full px-4 py-2" id="playToggle" aria-label="Play" data-state="paused"><span class="play">
+					<button bind:this={playToggle} on:click={isClicked}   class="border border-gray-500 text-white rounded-full px-4 py-2" id="playToggle" aria-label="Play" data-state="paused"><span class="play">
               <svg class="fill-current" viewbox="0 0 20 20" width="20" height="20">
                 <polygon points="4 4 16 10 4 16"></polygon>
               </svg></span><span class="pause">
