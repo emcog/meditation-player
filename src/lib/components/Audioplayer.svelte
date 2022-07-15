@@ -4,7 +4,7 @@
 </script>
 <ul id ="track-list">
 	{#each tracks as { title, description, url }, i }
-		<li>
+		<li id='{ i + 1 }'>
 			<figure>
 			<figcaption>
 					<h2>{i + 1 }. {title}</h2>

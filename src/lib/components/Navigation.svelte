@@ -1,7 +1,6 @@
 <script context="module">
 	import { tracks } from '../../data/tracks';
 	import Button from './Button.svelte';
-	import Test from './Test.svelte';
 </script>
 
 
@@ -10,7 +9,7 @@
 	<span>Meditation:</span>
 	<ul>
 		{ #each tracks as {title}, i }
-			<li><a href='www.google.com'>{i + 1}. <span class='hidden'>{title}</span></a></li>
+			<li><a href='#{ i + 1 }'>{i + 1}. <span class='hidden'>{title}</span></a></li>
 		{/each}
 	</ul>
 
