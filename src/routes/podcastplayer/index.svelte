@@ -1,6 +1,6 @@
 <script>
 	import Navigation from '../../lib/components/Navigation.svelte';
-	import Audioplayer from '../../lib/components/Audioplayer.svelte';
+	import Audioplayer from '../../lib/components/podcastplayer/Audioplayer.svelte';
 </script>
 
 <Navigation/>

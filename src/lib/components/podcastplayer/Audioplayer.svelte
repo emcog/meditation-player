@@ -1,5 +1,5 @@
 <script context="module">
-	import { tracks } from '../../data/tracks';
+	import { tracks } from '../../../data/tracks';
 
 </script>
 <ul id ="track-list">
