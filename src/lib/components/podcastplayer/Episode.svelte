@@ -1,14 +1,13 @@
 <script context="module">
-	import { tracks } from '../../data/tracks';
-	import Overview from './Overview.svelte';
+	import { episodes } from '$lib/data/podcast.json';
+	// import Overview from './Overview.svelte';
 
 </script>
 <script>
 	import Button from '../Button.svelte';
 </script>
-<Overview/>
 <ul id ="track-list">
-	{#each tracks as { title, description, url }, i }
+	{#each episodes as { title, description, url }, i }
 		<li id='{ i + 1 }'>
 			<figure>
 			<figcaption>
