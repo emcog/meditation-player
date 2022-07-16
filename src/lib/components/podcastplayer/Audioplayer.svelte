@@ -14,30 +14,11 @@
 			<figcaption>
 					<h2>{i + 1 }. {title}</h2>
 					<p>{description}</p>
+					<Button parentClass='float-right' cta={"Download"}/>
 				</figcaption>
-				<audio controls src={url}>
-				</audio>
+				<audio controls src={url} class='w-full'></audio>
 			</figure>
-			<Button parentClass='float-right' cta={"Download"}/>
+
 		</li>
 	{/each}
 </ul>
-
-
-<style>
-h2 {
-		font-size: 3rem;
-}
-
-		li {
-		background: white;
-		border-bottom-width: 1px;
-		border-bottom-color: black ;
-		padding:20px ;
-}
-
-audio {
-		width: 100%;
-}
-
-</style>

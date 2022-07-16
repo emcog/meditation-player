@@ -101,13 +101,9 @@ body::before {
 h1,
 h2,
 p {
-	/*font-weight: 400;*/
 	color: var(--heading-color);
 }
 
-p {
-	/*line-height: 1.5;*/
-}
 
 a {
 	color: var(--accent-color);
@@ -118,14 +114,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-h1 {
-	/*font-size: 2rem;*/
-	text-align: center;
-}
-
-h2 {
-	/*font-size: 1rem;*/
-}
 
 pre {
 	font-size: 16px;
