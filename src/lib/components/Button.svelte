@@ -1,7 +1,8 @@
 <script>
 	export let cta;
+	export let parentClass;
 </script>
-<button>{cta}</button>
+<button class='{parentClass}'>{cta}</button>
 <style>
 		.primary {
 

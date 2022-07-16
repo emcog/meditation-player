@@ -1,5 +1,8 @@
 {
-  "overview": "We build human organisations. We believe the future of organsations is human-centred, but the bottom line dictates that leaders can’t risk untried programmes with unclear benefits.\nThese short, guided mindfulness tracks were first taught to NHS hospital staff as part of the Mindfulness-Based Organisational Education (MBOE), which is an evidence-based programme. It’s taught to organisations and communities to empower people to create a more human and sustainable world.\nThese tracks offer a dual purpose: The ‘how’ and the ‘why’. They are a great place to start and our book, Social Mindfulness: A guided to mindfulness tracks from Mindfulness-Based Organisational Education, goes into greater depth.",
+  "overview": {
+    "title": "Meditations from Mindfulness Based Organisational Education (MBOE)",
+    "summary": "We build human organisations. We believe the future of organsations is human-centred, but the bottom line dictates that leaders can’t risk untried programmes with unclear benefits.\nThese short, guided mindfulness tracks were first taught to NHS hospital staff as part of the Mindfulness-Based Organisational Education (MBOE), which is an evidence-based programme. It’s taught to organisations and communities to empower people to create a more human and sustainable world.\nThese tracks offer a dual purpose: The ‘how’ and the ‘why’. They are a great place to start and our book, Social Mindfulness: A guided to mindfulness tracks from Mindfulness-Based Organisational Education, goes into greater depth."
+  },
   "tracks": [
     {
       "title": "Three-Step reset",

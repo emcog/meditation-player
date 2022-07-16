@@ -1,7 +1,12 @@
 <script context="module">
-	import { tracks } from '../../../data/tracks';
+	import { tracks } from '../../data/tracks';
+	import Overview from './Overview.svelte';
 
 </script>
+<script>
+	import Button from '../Button.svelte';
+</script>
+<Overview/>
 <ul id ="track-list">
 	{#each tracks as { title, description, url }, i }
 		<li id='{ i + 1 }'>
@@ -13,6 +18,7 @@
 				<audio controls src={url}>
 				</audio>
 			</figure>
+			<Button parentClass='float-right' cta={"Download"}/>
 		</li>
 	{/each}
 </ul>
