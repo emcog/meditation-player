@@ -1,6 +1,6 @@
 <script>
 	import { episodes } from '$lib/data/podcast.json';
-	import Button from '../Button.svelte';
+	import DownloadButton from './DownloadButton.svelte';
 	export let episodeClass;
 </script>
 
@@ -12,7 +12,7 @@
 					<h2 class="mt-4">{i + 1 }. {title}</h2>
 					<p>{description}</p>
 				</figcaption>
-				<Button buttonClass='float-right mb-4 -mt-4' cta={"Download"}/>
+				<DownloadButton downloadButtonClass='float-right mb-4 -mt-4' downloadLink='{url}'/>
 				<audio controls src={url} class='w-full'></audio>
 			</figure>
 		</li>
