@@ -26,20 +26,20 @@
 /* type-scale styles */
 /*@import url('https://fonts.googleapis.com/css?family=Lexend+Deca:300,400');*/
 
-html {font-size: 100%;} /*16px*/
+html {font-size: 137.5%;} /*22px*/
 
 body {
 	background: white;
 	font-family: 'Lexend Deca', sans-serif;
 	font-weight: 300;
-	line-height: 1.6;
+	line-height: 1.47;
 	color: #000000;
 }
 
 p {margin-bottom: 1rem;}
 
 h1, h2, h3, h4, h5 {
-	margin: 3rem 0 1.38rem;
+	margin: 3rem 0 0.69rem;
 	font-family: 'Lexend Deca', sans-serif;
 	font-weight: 400;
 	line-height: 1.3;

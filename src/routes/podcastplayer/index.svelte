@@ -5,7 +5,8 @@
 </script>
 
 <Navigation/>
-<Overview overviewClass="w-1/2"/>
-<Episode episodeClass="w-full"/>
+
+<Overview overviewClass="max-w-xl grid grid-cols-[220px_1fr] gap-x-2"/>
+<Episode episodeClass="max-w-xl"/>
 
 <style></style>

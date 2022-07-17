@@ -4,7 +4,7 @@
 	export let episodeClass;
 </script>
 
-<ul class="{episodeClass} max-w-prose" id ="track-list">
+<ul class="{episodeClass}" id ="track-list">
 	{#each episodes as { title, description, url }, i }
 		<li id='{ i + 1 }'>
 			<figure>
