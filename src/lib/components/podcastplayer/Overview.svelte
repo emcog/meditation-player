@@ -3,7 +3,7 @@
 	import Summary from './Summary.svelte';
 	export let overviewClass;
 </script>
-<section class="{overviewClass}" aria-label='summary' >
+<section class="{overviewClass} border-b-2 pb-6 mb-1" aria-label='summary' >
 	<img class="row-span-1 rounded drop-shadow-md"
 			 alt="'I relate therefore I am', A portrait of Descartes with a images of people overlaid"
 			 src="$lib/images/MBOE-social-mindfulness_cover-1x.jpeg"
