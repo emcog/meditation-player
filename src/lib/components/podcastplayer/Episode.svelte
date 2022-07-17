@@ -7,12 +7,12 @@
 <ul class="{episodeClass}" id ="track-list">
 	{#each episodes as { title, description, url }, i }
 		<li id='{ i + 1 }'>
-			<figure>
+			<figure class='border-b-2 pb-8'>
 			<figcaption>
-					<h2>{i + 1 }. {title}</h2>
+					<h2 class="mt-4">{i + 1 }. {title}</h2>
 					<p>{description}</p>
-					<Button parentClass='float-right' cta={"Download"}/>
 				</figcaption>
+				<Button buttonClass='float-right mb-4 -mt-4' cta={"Download"}/>
 				<audio controls src={url} class='w-full'></audio>
 			</figure>
 		</li>

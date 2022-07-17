@@ -1,7 +1,7 @@
 <script>
 	export let cta;
-	export let parentClass;
+	export let buttonClass;
 </script>
-<button class='{parentClass} rounded-full border-2 uppercase'>
+<button class='{buttonClass} rounded-full border-2 px-6 py-1 uppercase tracking-widest text-xs font-bold'>
 	{cta}
 </button>

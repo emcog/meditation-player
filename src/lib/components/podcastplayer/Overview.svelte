@@ -1,5 +1,6 @@
 <script>
 	import { title, subtitle, summary } from '$lib/data/podcast.json';
+	import Summary from './Summary.svelte';
 	export let overviewClass;
 </script>
 <section class="{overviewClass}" aria-label='summary' >
@@ -14,7 +15,8 @@
 	<div class="row-span-2 -mt-3">
 		<h1>{title}</h1>
 		<p aria-label="sub-title">{subtitle}</p>
-		<p aria-label="summary">{summary}</p>
+		<Summary/>
+
 	</div>
 </section>
 <style>

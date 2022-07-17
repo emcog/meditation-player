@@ -6,20 +6,15 @@
 </script>
 
 <header>
-	<div class="corner">
-		<a href="	www.mindfulnessconnected.com">
-			<img src={logo} alt="Mindfulness Connected" />
-		</a>
-	</div>
-
 
 
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
+		<a href="www.mindfulnessconnected.com">
+			<img src={logo} alt="Mindfulness Connected" />
+		</a>
 		<ul>
+			<li><Button cta={"Buy the book"}/></li>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">About</a>
@@ -28,14 +23,7 @@
 				<a sveltekit:prefetch href="/todos">Todos</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 
-		<ul class='ml-auto'>
-			<li><Button cta={"Buy the book"}/></li>
-			<li><img src='/apple-podcasts-lg-2x.png' alt='apple podcasts'/></li>
-		</ul>
 	</nav>
 
 	<div class="corner">
