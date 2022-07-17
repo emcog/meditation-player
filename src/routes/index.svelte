@@ -3,8 +3,8 @@
 </script>
 
 <script lang="ts">
-	import Audioplayer from '$lib/components/podcastplayer/Episode.svelte';
-	import Overview from '$lib/components/podcastplayer/Overview.svelte';
+	// import Audioplayer from '$lib/components/podcastplayer/Episode.svelte';
+	// import Overview from '$lib/components/podcastplayer/Overview.svelte';
 
 </script>
 
@@ -15,7 +15,7 @@
 
 
 
-<Overview/>
-<Audioplayer/>
+<!--<Overview/>-->
+<!--<Audioplayer/>-->
 
 <style></style>
