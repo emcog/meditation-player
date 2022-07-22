@@ -12,7 +12,6 @@
 					<h2 class="mt-4">{i + 1 }. {title}</h2>
 					<p>{description}</p>
 				</figcaption>
-				<DownloadButton downloadButtonClass='float-right mb-4 -mt-4' downloadLink='{url}'/>
 				<audio controls src={url} class='w-full'></audio>
 			</figure>
 		</li>

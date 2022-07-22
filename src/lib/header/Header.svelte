@@ -13,16 +13,16 @@
 		<a href="www.mindfulnessconnected.com">
 			<img src={logo} alt="Mindfulness Connected" />
 		</a>
-		<ul>
-			<li><Button cta={"Buy the book"}/></li>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li>
-		</ul>
+		<Button cta={"Buy the book"}/>
+<!--		<ul>-->
+<!--			<li></li>-->
+<!--			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>-->
+<!--			<li class:active={$page.url.pathname === '/about'}><a sveltekit:prefetch href="/about">About</a>-->
+<!--			</li>-->
+<!--			<li class:active={$page.url.pathname === '/todos'}>-->
+<!--				<a sveltekit:prefetch href="/todos">Todos</a>-->
+<!--			</li>-->
+<!--		</ul>-->
 
 	</nav>
 
