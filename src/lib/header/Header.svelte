@@ -1,15 +1,15 @@
 <script lang="ts">
 	// import { page } from '$app/stores';
-	import logo from './mindfulness-connected-logo_w.svg';
+	import logo from './mindfulness-connected-logo_t.svg';
 	import Button from '../components/Button.svelte';
 
 </script>
 
 <header>
+	<!--	adobe futura-->
+	<link rel="stylesheet" href="https://use.typekit.net/edm6svv.css"/>
 
-
-
-	<nav class='flex py-4 bg-teal-50'>
+	<nav class='flex py-4 bg-gray-100 mb-2'>
 		<a class='md:ml-8 ml-4' href="www.mindfulnessconnected.com">
 			<img class='w-[120px]' src={logo} alt="Mindfulness Connected" />
 		</a>

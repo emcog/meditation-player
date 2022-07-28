@@ -10,7 +10,7 @@
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<p>visit <a href="https://www.mindfulnessconnected.com/mboe">mindfulnessconnected.com/mboe</a> to learn about our programme</p>
 </footer>
 
 <style>
