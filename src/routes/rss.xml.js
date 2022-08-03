@@ -21,10 +21,15 @@ export async function get() {
 
 const xml =
 	(title, subtitle, summary, image, episodes) =>
-			`<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+			`<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" version="2.0">
   <channel>
     <title>${title}</title>
     <description>${summary}</description>
+    <image>
+            <url>${image.url}</url>
+            <title>${image.title}</title>
+            <link>${image.link}</link>
+        </image>
     ${episodes.map(
 			episode => 
 				`<item>
