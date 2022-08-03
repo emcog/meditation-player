@@ -6,8 +6,6 @@ export async function get() {
 	const podcast = await pcast;
 	const body = xml(podcast)
 
-	console.log('podcast');
-
 
 
 	const headers = {
@@ -24,7 +22,8 @@ const xml =
 	podcast => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>${podcast.title}</title>
-    <description>A blog built with SvelteKit about tech and stuff!</description>
+    <description>${podcast.summary}</description>
+    <div>${podcast.episodes[0].title}</div>
   </channel>
 </rss>`
 
