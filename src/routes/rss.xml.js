@@ -24,31 +24,38 @@ const xml =
 			`<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" version="2.0">
   <channel>
     <title>${title}</title>
-    <link></link>
+    <link>${about.link}</link>
     <image>
 			<url>${image.url}</url>
 			<title>${image.title}</title>
-			<link>${image.link}</link>
+			<link>${about.link}</link>
 		</image>
 		<description>${description}</description>
-		<language>${}</language>
-		<copyright>${}</copyright>
-		<atom:link href="${}" rel="self" type="application/rss+xml"/>
-		<lastBuildDate>${}</lastBuildDate>
-		<itunes:author>${}</itunes:author>
-		<itunes:summary>${}</itunes:summary>
+		<language>${about.language}</language>
+		<copyright>${about.copyright}</copyright>
+		<atom:link href="${about.feedLink}" rel="self" type="application/rss+xml"/>
+		<lastBuildDate>${about.buildDate}</lastBuildDate>
+		<itunes:author>${about.author}</itunes:author>
+		<itunes:summary>${about.description}</itunes:summary>
+		<itunes:type>serial</itunes:type>
 		<itunes:owner>
-			<itunes:name></itunes:name>
-			<itunes:email></itunes:email>
+			<itunes:name> 
+				${about.owner.length === 0 ? about.author : about.owner }
+			</itunes:name>
+			<itunes:email>${about.email}</itunes:email>
 		</itunes:owner>
-		<itunes:explicit></itunes:explicit>
-		<itunes:keywords></itunes:keywords>
-		<itunes:image href=""/>
-		<rawvoice:rating></rawvoice:rating>
-		<rawvoice:location></rawvoice:location>
-		<rawvoice:frequency></rawvoice:frequency>
-		<itunes:category text=""/>
-		<pubDate></pubDate>
+		<itunes:explicit>${about.explicit}</itunes:explicit>
+		<itunes:keywords>${about.keywords}</itunes:keywords>
+		<itunes:image href="${image.url}"/>
+		<rawvoice:rating>${about.rawvoice.rating}</rawvoice:rating>
+		<rawvoice:location>${about.rawvoice.location}</rawvoice:location>
+		<rawvoice:frequency>${about.rawvoice.frequency}</rawvoice:frequency>
+		<itunes:category text="${about.category}">
+			${about.subCategory.length === 0 ? null : `<itunes:category text="${about.subCategory}"/>`}
+			${about.secondaryCat.length === 0 ? null : `<itunes:category><itunes:category text="${about.secondaryCat}"/>`}
+			${about.secondarySubCat.length === 0 ? null : `<itunes:category><itunes:category text="${about.secondarySubCat}"/>`}
+		</itunes:category>
+		<pubDate>${about.pubDate}</pubDate>
 		
 		
     ${episodes.map(
