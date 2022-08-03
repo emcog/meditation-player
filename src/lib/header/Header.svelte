@@ -9,7 +9,7 @@
 	<!--	adobe futura-->
 	<link rel="stylesheet" href="https://use.typekit.net/edm6svv.css"/>
 
-	<nav class='flex py-4 bg-gray-100 mb-2'>
+	<nav class='flex py-4 border-b-2 mb-4'>
 		<a class='md:ml-8 ml-4' href="www.mindfulnessconnected.com">
 			<img class='w-[120px]' src={logo} alt="Mindfulness Connected" />
 		</a>
