@@ -4,7 +4,8 @@ import pcast from '$lib/data/podcast';
 export async function get() {
 
 	const podcast = await pcast;
-	const body = xml(podcast)
+	const {title, subtitle, summary, image, episodes } = podcast;
+	const body = xml(title, subtitle, summary, image, episodes)
 
 
 
@@ -19,11 +20,12 @@ export async function get() {
 }
 
 const xml =
-	podcast => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+	(title, subtitle, summary, image, episodes) =>
+			`<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>${podcast.title}</title>
-    <description>${podcast.summary}</description>
-    <div>${podcast.episodes[0].title}</div>
+    <title>${title}</title>
+    <description>${summary}</description>
+    <div>${episodes[0].title}</div>
   </channel>
 </rss>`
 
