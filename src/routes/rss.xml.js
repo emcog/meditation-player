@@ -1,4 +1,4 @@
-//https://scottspence.com/posts/make-an-rss-feed-with-sveltekit
+// thanks to https://scottspence.com/posts/make-an-rss-feed-with-sveltekit
 import pcast from '$lib/data/podcast';
 
 export async function get() {
@@ -25,7 +25,13 @@ const xml =
   <channel>
     <title>${title}</title>
     <description>${summary}</description>
-    <div>${episodes[0].title}</div>
+    ${episodes.map(
+			episode => 
+				`<item>
+					<title>${episode.title}</title>
+					<description>${episode.description}</description>
+				</item>`
+			).join('')}
   </channel>
 </rss>`
 
