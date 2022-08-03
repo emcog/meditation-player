@@ -58,9 +58,10 @@ const xml =
 		<pubDate>${about.pubDate}</pubDate>
 		
 		
-    ${episodes.map(
-			e => 
+    ${episodes.map((
+			e, index) => 
 				`<item>
+					${about.serial ? `<itunes:episode>${index + 1}</itunes:episode>` : null }
 					<title>${e.title}</title>
 					<link>${e.url}</link>
 					<pubDate>${e.pubDate}</pubDate>
