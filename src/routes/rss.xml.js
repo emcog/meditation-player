@@ -50,29 +50,21 @@ const xml =
 		<itunes:category text=""/>
 		<pubDate></pubDate>
 		
-			
-			
-			
-		
-		
-		
 		
     ${episodes.map(
-			episode => 
+			e => 
 				`<item>
-					<title>${episode.title}</title>
-					<description>${episode.description}</description>
-					<title></title>
-					<link></link>
-					<pubDate></pubDate>
-					<description></description>
-					<enclosure url="" length="" type="audio/mpeg"/>
+					<title>${e.title}</title>
+					<link>${e.url}</link>
+					<pubDate>${e.pubDate}</pubDate>
+					<description>${e.description}</description>
+					<enclosure url="${e.url}" length="${e.length}" type="audio/mpeg"/>
 					<guid></guid>
-					<itunes:duration></itunes:duration>
-					<itunes:summary></itunes:summary>
-					<itunes:image href=""/>
-					<itunes:keywords></itunes:keywords>
-					<itunes:explicit></itunes:explicit>
+					<itunes:duration>${e.duration}</itunes:duration>
+					<itunes:summary>${e.description}</itunes:summary>
+					<itunes:image href="${image.url}"/>
+					<itunes:keywords>${about.keywords}</itunes:keywords>
+					<itunes:explicit>${about.explicit}</itunes:explicit>
 				</item>`
 			).join('')}
   </channel>
