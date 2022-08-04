@@ -1,5 +1,6 @@
 <script>
-	import { title, subtitle, summary } from '$lib/data/podcast.json';
+	import { title } from '$lib/data/podcast.json';
+	// import { title, subtitle, summary } from '$lib/data/podcast.json';
 	import Summary from './Summary.svelte';
 	export let overviewClass;
 </script>
@@ -16,7 +17,7 @@
 		<h1>{title}</h1>
 		<p>mobile grid</p>
 		<p>change i frame to expand/collapse </p>
-		<p aria-label="sub-title">{subtitle}</p>
+<!--		<p aria-label="sub-title">{subtitle}</p>-->
 		<Summary/>
 
 	</div>
