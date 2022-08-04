@@ -9,7 +9,7 @@
 		<li id='{ i + 1 }'>
 			<figure class='border-b-2 pb-8'>
 			<figcaption>
-					<h2 class="mt-4">{i + 1 }. {title}</h2>
+					<h2 class="mt-4">{title}</h2>
 					<p>{description}</p>
 				</figcaption>
 				<audio controls src={url} class='w-full'></audio>
