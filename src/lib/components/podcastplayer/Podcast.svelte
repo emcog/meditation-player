@@ -11,7 +11,7 @@
 	}
 
 	// find length of text, when more button === true run trunCate text with length of text
-	let shortText = 150;
+	let shortText = 160;
 	let bodyCopy = truncateText;
 	let fullText = description.length;
 	let moreText = false
@@ -31,10 +31,10 @@
 								src/lib/images/MBOE-social-mindfulness_cover-2x.jpeg 2x,
 								src/lib/images/MBOE-social-mindfulness_cover-3x.jpeg 3x,
 								src/lib/images/MBOE-social-mindfulness_cover-4x.jpeg 4x" />
-	<div class="row-span-2 -mt-3">
+	<div class="row-span-2 mt-3 md:-mt-3">
 		<h1>{title}</h1>
 		<p class="">{moreText ? bodyCopy(description, fullText) : bodyCopy(description, shortText)}</p>
-		<button class="float-right underline {moreText? '-mt-2':'mt-[-54px]'}" on:click='{toggleMoreText}'>{moreText? "Less":"More"}</button>
+		<button class="float-right underline {moreText? '-mt-4':'mt-[-54px]'}" on:click='{toggleMoreText}'>{moreText? "Less":"More"}</button>
 	</div>
 </section>
 <style>

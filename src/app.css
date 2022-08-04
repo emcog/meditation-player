@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
 	margin: 3rem 0 0.69rem;
 	font-family: futura-pt, sans-serif;
 	font-weight: 600;
-	line-height: 0.9;
+	line-height: 1.1;
 }
 
 h1 {
@@ -111,7 +111,7 @@ p {
 
 
 a {
-	color: var(--accent-color);
+	color: #00B398;
 	text-decoration: none;
 }
 
