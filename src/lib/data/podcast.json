@@ -10,8 +10,11 @@
     "owner": "",
     "category":"Education",
     "subCategory": "Courses",
-    "secondaryCat": "",
-    "secondarySubCat": "",
+    "moreCategories": [
+      {"category": "",
+      "subCategory": ""
+      }
+    ],
     "serial": "true",
     "copyright": "Mindfulness Connected 2020",
     "language": "en-us",

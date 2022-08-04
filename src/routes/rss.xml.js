@@ -1,4 +1,4 @@
-// thanks to https://scottspence.com/posts/make-an-rss-feed-with-sveltekit
+// based on https://scottspence.com/posts/make-an-rss-feed-with-sveltekit
 import pcast from '$lib/data/podcast';
 
 export async function get() {
@@ -6,8 +6,6 @@ export async function get() {
 	const podcast = await pcast;
 	const { title, description, image, about, episodes } = podcast;
 	const body = xml(title, description, image, about, episodes)
-
-
 
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
@@ -52,8 +50,14 @@ const xml =
 		<rawvoice:frequency>${about.rawvoice.frequency}</rawvoice:frequency>
 		<itunes:category text="${about.category}">
 			${about.subCategory.length === 0 ? null : `<itunes:category text="${about.subCategory}"/>`}
-			${about.secondaryCat.length === 0 ? null : `<itunes:category><itunes:category text="${about.secondaryCat}"/>`}
-			${about.secondarySubCat.length === 0 ? null : `<itunes:category><itunes:category text="${about.secondarySubCat}"/>`}
+			${about.moreCategories.map(secondaryCategory =>
+				`<itunes:category><itunes:category text="${secondaryCategory.category}"/>`
+				`<itunes:category><itunes:category text="${secondaryCategory.subCategory}"/>`
+			// secondaryCategory.subCategory
+			)
+				.join('')}
+			<!--			todo replace with each or map-->
+
 		</itunes:category>
 		<pubDate>${about.pubDate}</pubDate>
 		
@@ -71,10 +75,9 @@ const xml =
 					<itunes:duration>${e.duration}</itunes:duration>
 					<itunes:summary>${e.description}</itunes:summary>
 					<itunes:image href="${image.url}"/>
-					<itunes:keywords>${about.keywords}</itunes:keywords>
+					<itunes:keywords>${e.keywords ? e.keywords : about.keywords}</itunes:keywords>
 					<itunes:explicit>${about.explicit}</itunes:explicit>
 				</item>`
 			).join('')}
   </channel>
 </rss>`
-
