@@ -32,6 +32,7 @@ const xml =
 		<language>${about.language}</language>
 		<copyright>${about.copyright}</copyright>
 		<atom:link href="${about.feedLink}" rel="self" type="application/rss+xml"/>
+		<!--		todo replace with loop through episode dates and find last-->
 		<lastBuildDate>${about.buildDate}</lastBuildDate>
 		<itunes:author>${about.author}</itunes:author>
 		<itunes:summary>${about.description}</itunes:summary>
@@ -54,14 +55,11 @@ const xml =
 		${about.moreCategories[0].category.length === 0 ? null :
 			about.moreCategories.map(secondaryCategory =>
 					`<itunes:category text="${secondaryCategory.category}">
-					<itunes:category text="${secondaryCategory.subCategory}"/>
+					${secondaryCategory.subCategory === 0 ? null : `<itunes:category text="${secondaryCategory.subCategory}"/>`}
 					</itunes:category>`
 			)
 				.join('')}
-		
 		<pubDate>${about.pubDate}</pubDate>
-		
-		
     ${episodes.map((
 			e, index) => 
 				`<item>
