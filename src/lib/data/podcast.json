@@ -11,8 +11,14 @@
     "category":"Education",
     "subCategory": "Courses",
     "moreCategories": [
-      {"category": "",
-      "subCategory": ""
+      {"category": "Business",
+      "subCategory": "Management"
+      },
+      {"category": "Health &amp; Fitness",
+      "subCategory": "Mental Health"
+      },
+      {"category": "Society &amp; Culture",
+      "subCategory": "Relationships"
       }
     ],
     "serial": "true",
