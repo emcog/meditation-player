@@ -49,23 +49,21 @@ const xml =
 		<rawvoice:location>${about.rawvoice.location}</rawvoice:location>
 		<rawvoice:frequency>${about.rawvoice.frequency}</rawvoice:frequency>
 		<itunes:category text="${about.category}">
-			${about.subCategory.length === 0 ? null : `<itunes:category text="${about.subCategory}"/>`}
+			${about.subCategory.length === 0 ? "nil" : `<itunes:category text="${about.subCategory}"/>`}
+		</itunes:category>			
+		
 			${about.moreCategories.map(secondaryCategory =>
-				`<itunes:category><itunes:category text="${secondaryCategory.category}"/>`
-				`<itunes:category><itunes:category text="${secondaryCategory.subCategory}"/>`
-			// secondaryCategory.subCategory
+					`<itunes:category text="${secondaryCategory.category}">
+					</itunes:category>`
 			)
 				.join('')}
-			<!--			todo replace with each or map-->
-
-		</itunes:category>
 		<pubDate>${about.pubDate}</pubDate>
 		
 		
     ${episodes.map((
 			e, index) => 
 				`<item>
-					${about.serial ? `<itunes:episode>${index + 1}</itunes:episode>` : null }
+					${about.serial ? `<itunes:episode>${index + 1}</itunes:episode>` : "nil" }
 					<title>${e.title}</title>
 					<link>${e.url}</link>
 					<pubDate>${e.pubDate}</pubDate>
