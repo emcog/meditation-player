@@ -39,7 +39,7 @@ const xml =
 		<itunes:type>serial</itunes:type>
 		<itunes:owner>
 			<itunes:name> 
-				${about.owner.length === 0 ? about.author : about.owner }
+				${about.owner ? about.owner : about.author }
 			</itunes:name>
 			<itunes:email>${about.email}</itunes:email>
 		</itunes:owner>
@@ -50,12 +50,12 @@ const xml =
 		<rawvoice:location>${about.rawvoice.location}</rawvoice:location>
 		<rawvoice:frequency>${about.rawvoice.frequency}</rawvoice:frequency>
 		<itunes:category text="${about.category}">
-			${about.subCategory.length === 0 ? null : `<itunes:category text="${about.subCategory}"/>`}
+			${about.subCategory ? `<itunes:category text="${about.subCategory}"/>` : null}
 		</itunes:category>			
 		${about.moreCategories[0].category.length === 0 ? null :
 			about.moreCategories.map(secondaryCategory =>
 					`<itunes:category text="${secondaryCategory.category}">
-					${secondaryCategory.subCategory === 0 ? null : `<itunes:category text="${secondaryCategory.subCategory}"/>`}
+					${secondaryCategory.subCategory ? `<itunes:category text="${secondaryCategory.subCategory}"/>` : null}
 					</itunes:category>`
 			)
 				.join('')}
@@ -69,7 +69,7 @@ const xml =
 					<pubDate>${e.pubDate}</pubDate>
 					<description>${e.description}</description>
 					<enclosure url="${e.url}" length="${e.length}" type="audio/mpeg"/>
-					<guid></guid>
+					<guid>${e.guid ? e.guid : e.url}</guid>
 					<itunes:duration>${e.duration}</itunes:duration>
 					<itunes:summary>${e.description}</itunes:summary>
 					<itunes:image href="${image.url}"/>
