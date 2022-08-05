@@ -1,21 +1,9 @@
-<script context="module" lang="ts">
-	export const prerender = true;
+<script>
+	import Episode from '../lib/components/podcastplayer/Episode.svelte';
+	import Podcast from '$lib/components/podcastplayer/Podcast.svelte';
 </script>
 
-<script lang="ts">
-	// import Audioplayer from '$lib/components/podcastplayer/Episode.svelte';
-	// import Overview from '$lib/components/podcastplayer/Overview.svelte';
-
-</script>
-
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-
-
-<!--<Overview/>-->
-<!--<Audioplayer/>-->
+<Podcast podcastClass="max-w-xl grid md:grid-cols-[220px_561px] gap-x-2"/>
+<Episode episodeClass="max-w-xl"/>
 
 <style></style>

@@ -38,4 +38,3 @@
 		</li>
 	{/each}
 </ul>
-<!--todo probably need to refactor into script tag with map or somesuch-->
