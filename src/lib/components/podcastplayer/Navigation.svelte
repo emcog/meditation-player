@@ -1,9 +1,13 @@
 <script context="module">
 	import { episodes } from '$lib/data/podcast.json';
-	import Button from '../Button.svelte';
+	// import Button from '../Button.svelte';
+	import LinkAsButton from '../LinkAsButton.svelte';
+</script>
+<script>
+	import LinkAsButton from '../LinkAsButton.svelte';
 </script>
 
-	<nav>
+<nav>
 		<div>logo</div>:
 		<span>Meditation:</span>
 		<ul>
@@ -13,7 +17,7 @@
 		</ul>
 
 		<ul class='ml-auto'>
-			<li><Button cta={"Buy the book"}/></li>
+			<li><LinkAsButton cta={"Buy the book"} link="https://www.mindfulnessconnected.com/shop/social-mindfulness"/></li>
 			<li><img src='/apple-podcasts-lg-2x.png' alt='apple podcasts'/></li>
 		</ul>
 	</nav>

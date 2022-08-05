@@ -34,7 +34,7 @@
 	<div class="row-span-2 mt-3 md:-mt-3">
 		<h1>{title}</h1>
 		<p class="">{moreText ? bodyCopy(description, fullText) : bodyCopy(description, shortText)}</p>
-		<button class="float-right underline {moreText? '-mt-4':'mt-[-54px]'}" on:click='{toggleMoreText}'>{moreText? "Less":"More"}</button>
+		<button class="float-right underline text-sm font-sans font-semibold underline-offset-1 decoration-2 {moreText? '-mt-4':'mt-[-51px]'}" on:click='{toggleMoreText}'>{moreText? "Less":"More"}</button>
 	</div>
 </section>
 <style>

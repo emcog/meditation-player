@@ -2,6 +2,7 @@
 	// import { page } from '$app/stores';
 	import logo from './mindfulness-connected-logo_t.svg';
 	import Button from '../components/Button.svelte';
+	import LinkAsButton from '../components/LinkAsButton.svelte';
 
 </script>
 
@@ -13,7 +14,7 @@
 		<a class='md:ml-8 ml-4' href="www.mindfulnessconnected.com">
 			<img class='w-[120px]' src={logo} alt="Mindfulness Connected" />
 		</a>
-		<Button buttonClass='ml-auto md:mr-8 mr-4' cta={"Buy the book"}/>
+		<LinkAsButton LinkAsButtonClass='ml-auto md:mr-8 mr-4' cta={"Buy the book"} link={"https://www.mindfulnessconnected.com/shop/social-mindfulness"}/>
 
 
 	</nav>
