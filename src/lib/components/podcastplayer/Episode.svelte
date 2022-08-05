@@ -1,18 +1,15 @@
 <script>
 	import { episodes } from '$lib/data/podcast.json';
+	export let episodeClass;
 
 	let lisArray;
-
 	let hasBullets;
 
 	function checkBullets(copy){
 		hasBullets = copy.includes("\n•");
 		console.log(copy);
 		console.log(hasBullets);
-
 	}
-
-
 
 	function bulletsMakeLis(copy) {
 			//parse copy for bullets and format into array
@@ -23,12 +20,7 @@
 			lisArray = lisArraySpareSpace.map(li => li.trim())
 	}
 
-	bulletsMakeLis(episodes[0].description);
-
-
-	// if episode condtains "\n •" then parse into clean array, itterate over clean array into ul li
-
-	export let episodeClass;
+	// bulletsMakeLis(episodes[0].description);
 </script>
 
 <ul class="{episodeClass}" id ="track-list">
